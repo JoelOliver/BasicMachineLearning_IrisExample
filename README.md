@@ -1,11 +1,13 @@
 # BasicMachineLearning_IrisExample
 Utilization of some basic algorithms for the recogniton of one of the Iris plants among the three existing (Setosa, Versicolor, Virginica) using Java Object Oriented .
-Below , observes The algorithms that I used for the recognition of the plants :
+
+Next , these are the algorithms that I used for the recognition of the plants :
 * Nearest Neighbor
 * Nearest Centroid
 * Maximum Correlation - Data Normalization 
 
-Base of Iris Dates (Wikipedia) - Fischer 
+Base of Iris Dates (Wikipedia) - Fischer
+ 
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
 Below , the first Column represents the length of the Sepala (sl), the second the width of the Sepala (sw),
