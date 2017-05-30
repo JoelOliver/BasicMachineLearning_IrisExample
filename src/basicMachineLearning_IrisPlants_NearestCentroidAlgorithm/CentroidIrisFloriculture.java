@@ -239,8 +239,8 @@ public class CentroidIrisFloriculture {
 
     public String analisarTesteCentroideMaisProximo(String nameFlori,int[] comp){
     	double hits= 0;
-
-    	String generalAnalysis = ">>>>>>                   Welcome to Floriculture: "+nameFlori + "                  <<<<<< \n\n";
+        String generalAnalysis = ">>>>>>                   Welcome to Floriculture: "+nameFlori + 
+        		                 "                  <<<<<< \n\n";
 		
 		for(int i=0;i<plantas_iris_teste.size();i++){
 			generalAnalysis+= "\n"+"Iris "+(i+1)+" : "+" "+
@@ -249,20 +249,20 @@ public class CentroidIrisFloriculture {
 		                plantas_iris_teste.get(i).getPl() +" "+
 					    plantas_iris_teste.get(i).getPw() 
 					    +" \n"+
-					    "Centroide mais Proximo : " + 
+					    "Nearest Centroid : " + 
 					    centroideMaisProximo(plantas_iris_teste.get(i));
 					    
 			
 			if(plantas_iris_teste.get(i).getId() == comp[i]){
 				hits ++;
-				    generalAnalysis+="  [Comparação CORRETA] \n";
+				    generalAnalysis+="  [CORRECT Comparison] \n";
 			}
 			else{
 				generalAnalysis+="\n";
 			}
 					    
 		}	
-		generalAnalysis+="\nAcertos : "+(int)hits+"\n"+"Porcentagem: "+
+		generalAnalysis+="\nHits : "+(int)hits+"\n"+"Percentage: "+
 			               String.format("%.2f", (hits/plantas_iris_teste.size())*100) +" % \n";
 		
     return generalAnalysis;
