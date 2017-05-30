@@ -24,29 +24,29 @@ public class CentroidIrisFloriculture {
 		plantas_iris_teste=new ArrayList<IrisPlant>();
 		
 		try{
-			FileInputStream entrada = new FileInputStream("iris.txt");
-		    InputStreamReader entradaFormatada = new InputStreamReader(entrada);
-		    BufferedReader entradaString = new BufferedReader(entradaFormatada);
+			FileInputStream in = new FileInputStream("iris.txt");
+		    InputStreamReader inFormat = new InputStreamReader(in);
+		    BufferedReader inString = new BufferedReader(inFormat);
 	
 		String l=null; 
-		String dados[];
-		int controle=1;
-		while((l=entradaString.readLine()) != null){
-			dados=l.split(",");
+		String dates[];
+		int control=1;
+		while((l=inString.readLine()) != null){
+			dates=l.split(",");
 			
-			if(controle<=40){
-			plantas_iris.add(new IrisPlant(Double.parseDouble(dados[0]),Double.parseDouble(dados[1]),
-					Double.parseDouble(dados[2]),Double.parseDouble(dados[3]),"Setosa"));
+			if(control<=40){
+			plantas_iris.add(new IrisPlant(Double.parseDouble(dates[0]),Double.parseDouble(dates[1]),
+					Double.parseDouble(dates[2]),Double.parseDouble(dates[3]),"Setosa"));
 			}
-			if(controle>40 && controle <=80){
-			plantas_iris.add(new IrisPlant(Double.parseDouble(dados[0]),Double.parseDouble(dados[1]),
-						Double.parseDouble(dados[2]),Double.parseDouble(dados[3]),"Versicolor"));
+			if(control>40 && control <=80){
+			plantas_iris.add(new IrisPlant(Double.parseDouble(dates[0]),Double.parseDouble(dates[1]),
+						Double.parseDouble(dates[2]),Double.parseDouble(dates[3]),"Versicolor"));
 			}
-			if(controle>80 && controle <=120){
-				plantas_iris.add(new IrisPlant(Double.parseDouble(dados[0]),Double.parseDouble(dados[1]),
-							Double.parseDouble(dados[2]),Double.parseDouble(dados[3]),"Virginica"));
+			if(control>80 && control <=120){
+				plantas_iris.add(new IrisPlant(Double.parseDouble(dates[0]),Double.parseDouble(dates[1]),
+							Double.parseDouble(dates[2]),Double.parseDouble(dates[3]),"Virginica"));
 			}
-			controle++;
+			control++;
 			            
 		               }
 		
@@ -58,17 +58,17 @@ public class CentroidIrisFloriculture {
 	
 	public void addPlantaTeste(String arquivoTxt){
 		try{
-			FileInputStream entrada = new FileInputStream(arquivoTxt);
-		    InputStreamReader entradaFormatada = new InputStreamReader(entrada);
-		    BufferedReader entradaString = new BufferedReader(entradaFormatada);
+			FileInputStream in = new FileInputStream(arquivoTxt);
+		    InputStreamReader inFormat = new InputStreamReader(in);
+		    BufferedReader inString = new BufferedReader(inFormat);
 	
 		String l=null; 
-		String dados[];
-		while((l=entradaString.readLine()) != null){
-			dados=l.split(",");
+		String dates[];
+		while((l=inString.readLine()) != null){
+			dates=l.split(",");
 			
-			plantas_iris_teste.add(new IrisPlant(Double.parseDouble(dados[0]),Double.parseDouble(dados[1]),
-					Double.parseDouble(dados[2]),Double.parseDouble(dados[3]),"Nao-Identificavel"));
+			plantas_iris_teste.add(new IrisPlant(Double.parseDouble(dates[0]),Double.parseDouble(dates[1]),
+					Double.parseDouble(dates[2]),Double.parseDouble(dates[3]),"No-Identity"));
 			            
 		               }
 		
