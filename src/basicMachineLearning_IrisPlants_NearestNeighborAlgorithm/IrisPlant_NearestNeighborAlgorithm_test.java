@@ -1,6 +1,7 @@
-/* @autor : Joel Oliveira Ribeiro
+/* @author : Joel Oliveira Ribeiro
  * Student of Computer Engineering at the Federal University of Ceara from Brazil
  * Basic Machine Learning for Pattern Recognition/Data Mining 
+ * Nearest Neighbor Algorithm
  */
 
 package basicMachineLearning_IrisPlants_NearestNeighborAlgorithm;
