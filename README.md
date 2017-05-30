@@ -3,7 +3,7 @@ Utilization of some basic algorithms for the recogniton of one of the Iris plant
 
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
->>>> Base of Iris Dates (Wikipedia) - Fischer <<<
+* Base of Iris Dates (Wikipedia) - Fischer 
 
 Below , the first Column represents the length of the Sepala (sl), the second the width of the Sepala (sw),
 The third the length of the Petala (pl), the fourth the width of the Petala (pw) and the fifth the Iris
