@@ -57,7 +57,7 @@ public class IrisFloriculture {
 		return plants_iris_test;
 	}
 	
-	public void addPlantaTeste(String arquivoTxt){
+	public void addPlantsTeste(String arquivoTxt){
 		try{
 			FileInputStream entrada = new FileInputStream(arquivoTxt);
 		    InputStreamReader entradaFormatada = new InputStreamReader(entrada);
