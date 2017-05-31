@@ -16,12 +16,22 @@ public class IrisPlantNormalized {
 	
 	// Initial Instance 
 	public IrisPlantNormalized(double sl, double sw, double pl, double pw, String name) {
-		this.sl = sl;
-		this.sw = sw;
-		this.pl = pl;
-		this.pw = pw;
+		this.sl = Normalization(sl,sl,sw,pl,pw);
+		this.sw = Normalization(sw,sl,sw,pl,pw);
+		this.pl = Normalization(pl,sl,sw,pl,pw);
+		this.pw = Normalization(pw,sl,sw,pl,pw);
 		this.name=name;
 		setId(this.name);
+	}
+	
+   /* Normalization Method 1 :Treating the four values (sl, sw, pl, pw) 
+	 as a vector, this method normalizes the values by making its norm equal to one.*/
+	private double Normalization(double value,double sl, double sw, double pl, double pw){
+		double n;
+		
+		n = (value)/(Math.pow((sl*sl)+(sw*sw)+(pl*pl)+(pw*pw), 0.5));
+		
+	return n;
 	}
 	
 	// Getters and Setters
