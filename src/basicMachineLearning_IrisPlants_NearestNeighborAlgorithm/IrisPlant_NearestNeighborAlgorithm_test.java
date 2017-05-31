@@ -28,7 +28,7 @@ public class IrisPlant_NearestNeighborAlgorithm_test {
 		textArea.setLineWrap(true);  
 		textArea.setWrapStyleWord(true); 
 		scrollPane.setPreferredSize( new Dimension( 900, 600 ) );
-		JOptionPane.showMessageDialog(null, scrollPane, "------ CQVR ------",  
+		JOptionPane.showMessageDialog(null, scrollPane, "------ IA Floriculture ------",  
 		                                       JOptionPane.DEFAULT_OPTION);
 
 	}
