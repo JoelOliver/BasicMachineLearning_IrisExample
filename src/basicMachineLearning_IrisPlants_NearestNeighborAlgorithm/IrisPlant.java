@@ -13,7 +13,7 @@ public class IrisPlant {
 	private double pl; // Lenght of Petala
 	private double pw; // Weight of Petala
 	private String name; // Names -> (Setosa, Versicolor, Virginica)
-	private int id; // Identification of Iris
+	private int id; // Id for some Iris type
 	
 	// Initial Instance 
 	public IrisPlant(double sl, double sw, double pl, double pw, String name) {
