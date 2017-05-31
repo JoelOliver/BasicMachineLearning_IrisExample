@@ -24,7 +24,7 @@ public class IrisPlantNormalized {
 		setId(this.name);
 	}
 	
-   /* Normalization Method 1 :Treating the four values (sl, sw, pl, pw) 
+   /* Normalization Method : Treating the four attributes (sl, sw, pl, pw) 
 	 as a vector, this method normalizes the values by making its norm equal to one.*/
 	private double Normalization(double value,double sl, double sw, double pl, double pw){
 		double n;
@@ -33,6 +33,7 @@ public class IrisPlantNormalized {
 		
 	return n;
 	}
+	
 	
 	// Getters and Setters
 	
