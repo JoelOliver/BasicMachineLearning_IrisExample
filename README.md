@@ -72,7 +72,6 @@ Below , for the test , it was removed 20% (30 data) of each type of Iris from th
 5.5 2.5 4.0 1.3 (Versicolor)
 
 6.1 3.0 4.6 1.4 (Versicolor)
-
-
-
--> README is updating ...
+   
+     
+      README is updating ...
