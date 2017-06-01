@@ -11,7 +11,7 @@ Base of Iris Dates (Wikipedia) - Fischer
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
 
-*** Below , for the test , it was removed 20% (30 data) of each type of Iris from the previous Database into "iris_teste.txt" file ***
+Below , for the test , it was removed 20% (30 data) of each type of Iris from the previous Database ("iris.txt") into "iris_teste.txt" file
 
 5.4 3.7 1.5 0.2 ->(Setosa)
 
@@ -72,5 +72,7 @@ https://en.wikipedia.org/wiki/Iris_flower_data_set
 5.5 2.5 4.0 1.3 (Versicolor)
 
 6.1 3.0 4.6 1.4 (Versicolor)
+
+
 
 -> README is updating ...
