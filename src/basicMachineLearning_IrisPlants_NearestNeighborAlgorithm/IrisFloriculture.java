@@ -22,7 +22,7 @@ public class IrisFloriculture {
 		plants_iris_test=new ArrayList<IrisPlant>();
 		
 		try{
-			FileInputStream in = new FileInputStream("iris.txt");
+			FileInputStream in = new FileInputStream("iris_training.txt");
 		    InputStreamReader inFormat = new InputStreamReader(in);
 		    BufferedReader inString = new BufferedReader(inFormat);
 	

@@ -24,7 +24,7 @@ public class NormCentroidIrisFloriculture {
 		plantas_iris_teste=new ArrayList<IrisPlantNormalized>();
 		
 		try{
-			FileInputStream in = new FileInputStream("iris.txt");
+			FileInputStream in = new FileInputStream("iris_training.txt");
 		    InputStreamReader inFormat = new InputStreamReader(in);
 		    BufferedReader inString = new BufferedReader(inFormat);
 	
