@@ -18,7 +18,8 @@ public class IrisPlant_AllAlgorithms_TestBench {
 		
 		// Initial Instance for Test Bench
 		IrisGeneralFloriculture tb = new IrisGeneralFloriculture(); 
-
+		
+		/*
         int control = 1;
         do {
         	try{
@@ -34,7 +35,7 @@ public class IrisPlant_AllAlgorithms_TestBench {
         }while(control!=0);
 		
 		System.out.println("FIM!");
-		
+		*/
 		
 	}
 

@@ -20,8 +20,8 @@ public class IrisPlant {
 	                                  sp[2] -> Lenght of Petal (pl)
 	                                  sp[3] -> Weight of Petal (pw)
 	                               */
-	private String plantType; // type of plant -> (Setosa, Versicolor,Virginica)
-	private int id; // Identification of plant -> (  1    ,    2      ,   3    )
+	private String plantType; // type of plant -> (Setosa, Versicolor,Virginica, No-Identity)
+	private int id; // Identification of plant -> (  1    ,    2      ,   3    ,     0      )
 	
 	// Initializing the instance
 	public IrisPlant(double sl, double sw, double pl, double pw, String plantType){
@@ -37,8 +37,9 @@ public class IrisPlant {
 
 	// Getters and Setters
 	
-	protected ArrayList<Double> getSp() {
-		return sp;
+	protected String getSp() {
+		return "["+sp.get(0).toString()+" "+sp.get(1).toString()+" "+
+	               sp.get(2).toString()+" "+sp.get(3).toString()+"]";
 	}
 
 	protected void setSp(ArrayList<Double> sp) {
@@ -69,6 +70,9 @@ public class IrisPlant {
         	this.id=0;
         }
         
+	}
+	protected void setIdTest(int id){
+		this.id=id;
 	}
 	
 	
