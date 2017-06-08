@@ -9,33 +9,39 @@
 
 package irisPlants_AllAlgorithms;
 
+import java.util.*;
+import java.lang.*;
+
 public class IrisPlant {
 
-	private double sp []; // s-> sepal and p-> petal 
-	                    /*sp[0] -> Lenght of Sepal (sl)
-	                      sp[1] -> Weight of Sepal (sw)
-	                      sp[2] -> Lenght of Petal (pl)
-	                      sp[3] -> Weight of Petal (pw)
-	                     */
-	private String plantType; // type of plant -> (setosa, versicolor,virginica)
+	private ArrayList<Double> sp ; // s-> sepal and p-> petal 
+	                              /*  sp[0] -> Lenght of Sepal (sl)
+	                                  sp[1] -> Weight of Sepal (sw)
+	                                  sp[2] -> Lenght of Petal (pl)
+	                                  sp[3] -> Weight of Petal (pw)
+	                               */
+	private String plantType; // type of plant -> (Setosa, Versicolor,Virginica)
 	private int id; // Identification of plant -> (  1    ,    2      ,   3    )
 	
 	// Initializing the instance
 	public IrisPlant(double sl, double sw, double pl, double pw, String plantType){
-		this.sp[0]=sl;
-		this.sp[1]=sw;
-		this.sp[2]=pl;
-		this.sp[3]=pw;
+		sp = new ArrayList<Double>();
+		
+		this.sp.add(sl);
+		this.sp.add(sw);
+		this.sp.add(pl);
+		this.sp.add(pw);
 		this.plantType=plantType;
+		setId(plantType);
 	}
 
 	// Getters and Setters
 	
-	protected double[] getSp() {
+	protected ArrayList<Double> getSp() {
 		return sp;
 	}
 
-	protected void setSp(double[] sp) {
+	protected void setSp(ArrayList<Double> sp) {
 		this.sp = sp;
 	}
 
@@ -51,8 +57,18 @@ public class IrisPlant {
 		return id;
 	}
 
-	protected void setId(int id) {
-		this.id = id;
+	protected void setId(String name) {
+        
+		if(name == "Setosa")
+        	this.id=1;
+        else if(name == "Versicolor")
+        	this.id=2;
+        else if(name == "Virginica")
+        	this.id=3;
+        else{
+        	this.id=0;
+        }
+        
 	}
 	
 	
