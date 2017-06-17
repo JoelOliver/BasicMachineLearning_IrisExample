@@ -21,7 +21,7 @@ public class IrisGeneralFloriculture {
 	private ArrayList <IrisPlant> plants_iris; // this array contains the FULL Data Base Origin
 	private ArrayList <IrisPlant> plants_iris_training; // this array contains the random Data for training 
 	private ArrayList <IrisPlant> plants_iris_test; // this array contains the random Data for test
-	private ArrayList < Integer >   comparatorIds;
+	private ArrayList < Integer >   comparatorIds;  // this array contains the Ids of Data Test for comparation in algorithm
 	
 	public IrisGeneralFloriculture (){
 		
@@ -68,7 +68,7 @@ public class IrisGeneralFloriculture {
 	}
 	
 	// The return of Full Data Base of Plant Iris allocated in plants_iris Array
-    protected void listaPlantaIris(){
+    protected void listaPlantaIris() {
   	     for(int i=0;i<plants_iris.size();i++){
   		   System.out.println(plants_iris.get(i).getSp() + " "+
   				              plants_iris.get(i).getPlantType() + " "+
@@ -162,6 +162,7 @@ public class IrisGeneralFloriculture {
     	System.out.println("The training and test Data was cleared \n");
     }
        
+    
 }
     
     
