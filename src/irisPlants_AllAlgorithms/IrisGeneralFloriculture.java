@@ -21,7 +21,7 @@ public class IrisGeneralFloriculture {
 	private ArrayList <IrisPlant> plants_iris; // this array contains the FULL Data Base Origin
 	private ArrayList <IrisPlant> plants_iris_training; // this array contains the random Data for training 
 	private ArrayList <IrisPlant> plants_iris_test; // this array contains the random Data for test
-	private ArrayList < Integer >   comparatorIds;  // this array contains the Ids of Data Test for comparation in algorithm
+	private ArrayList < Integer > comparatorIds;  // this array contains the Ids of Data Test for comparation in algorithm
 	
 	public IrisGeneralFloriculture (){
 		
@@ -159,11 +159,68 @@ public class IrisGeneralFloriculture {
     protected void cleanDataTrainingAndTest(){
     	plants_iris_test.clear();
     	plants_iris_training.clear();
+    	comparatorIds.clear();
     	System.out.println("The training and test Data was cleared \n");
     }
-       
+
+    protected String nearestNeighborAnalyse(){
+    	double hits = 0;
+		double percentage;
+		String generalAnalyse = ">>>>>>                   Welcome to a Smart Floriculture:                    <<<<<< \n\n";
+		
+		for(int i=0;i<plants_iris_test.size();i++){
+			generalAnalyse+= "\n"+"Iris "+(i+1)+" : "
+		                          +plants_iris_test.get(i).getSpString()
+				            	  +" \n"+
+					         "Nearest Neighbor : " 
+					              +plants_iris_training.get(nearestNeighbor(plants_iris_test.get(i))).getSpString();
+				
+			if(plants_iris_test.get(i).getId() == comparatorIds.get(i)){
+				    hits ++;
+				    generalAnalyse+="  [CORRECT Comparison] \n";
+			}
+			else{
+				generalAnalyse+="\n";
+			}
+					    
+		}	
+		generalAnalyse+="\nHits : "+(int)hits+"\n"+"Porcentagem: "+
+			               String.format("%.2f", (hits/plants_iris_test.size())*100) +" % \n";
+		
+    return generalAnalyse;
+    }
+    
+    private double distEuclidian(int index,IrisPlant new_iris){
+		
+		double distEuclidian=Math.sqrt(Math.pow(new_iris.getSp().get(0) - (plants_iris_training.get(index).getSp().get(0)), 2.0) 
+                + Math.pow(new_iris.getSp().get(1) - (plants_iris_training.get(index).getSp().get(1)), 2.0)
+                + Math.pow(new_iris.getSp().get(2) - (plants_iris_training.get(index).getSp().get(2)), 2.0)
+                + Math.pow(new_iris.getSp().get(3) - (plants_iris_training.get(index).getSp().get(3)), 2.0)); 
+		
+		return distEuclidian;
+	}
+
+    private int nearestNeighbor(IrisPlant plant_iris_test){
+	// Calculo da Distancia Euclidiana supondo a primeira fruta do catalogo como mais proxima da que deve ser reconhecida
+	 double smaller_distance=distEuclidian(0,plant_iris_test);
+     double distance;
+     int index_smaller_distance=0;
+     
+     for (int i=1;i<plants_iris_training.size();i++){
+	    	distance=distEuclidian(i,plant_iris_test);
+	    	if(distance < smaller_distance){
+	    		smaller_distance = distance ;
+	    		index_smaller_distance = i;
+	    		plant_iris_test.setPlantType(plants_iris_training.get(i).getPlantType());
+	    		plant_iris_test.setId(plants_iris_training.get(i).getPlantType());
+
+	    	    }
+	         }
+     
+     return index_smaller_distance;
+
     
 }
     
     
-
+}

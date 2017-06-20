@@ -36,8 +36,11 @@ public class IrisPlant {
 	}
 
 	// Getters and Setters
+	protected ArrayList<Double> getSp(){
+		return this.sp;
+	}
 	
-	protected String getSp() {
+	protected String getSpString() {
 		return "["+sp.get(0).toString()+" "+sp.get(1).toString()+" "+
 	               sp.get(2).toString()+" "+sp.get(3).toString()+"]";
 	}

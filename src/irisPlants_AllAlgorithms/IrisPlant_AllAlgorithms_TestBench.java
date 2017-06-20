@@ -19,23 +19,28 @@ public class IrisPlant_AllAlgorithms_TestBench {
 		// Initial Instance for Test Bench
 		IrisGeneralFloriculture tb = new IrisGeneralFloriculture(); 
 		
-		/*
-        int control = 1;
+		
+        int controlTest = 1;
         do {
         	try{
-        	System.out.println("Tape zero for exit or any other number to proceed: ");
-            Scanner input = new Scanner(System.in);
-        	control = input.nextInt();
-        	}
-        	catch(Exception e){
-        		System.out.println("Invalid Value , please try again ... \n");
-        		control=1;
+        	
+        	    System.out.println("Tape zero for exit or any other number to proceed: ");
+                Scanner input = new Scanner(System.in);
+        	    controlTest = input.nextInt();
+        	
         	}
         	
-        }while(control!=0);
+        	
+        	catch(Exception e){
+        	
+        		System.out.println("Invalid Value , please try again ... \n");
+        		controlTest=1;
+        	}
+        	
+        }while(controlTest!=0);
 		
 		System.out.println("FIM!");
-		*/
+		
 		
 	}
 
