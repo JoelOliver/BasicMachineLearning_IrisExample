@@ -138,9 +138,6 @@ public class IrisGeneralFloriculture {
 	                               plants_iris_training.get(i).getId()+"\n");
     		}
     	}
-    	else{
-    		System.out.println("There is no Data for training , please load it !!");
-    	}
     	
     	if(!plants_iris_test.isEmpty()){
     		System.out.println("Test data: \n");
@@ -150,8 +147,8 @@ public class IrisGeneralFloriculture {
                                    plants_iris_test.get(i).getId()+"\n");
     		}
     	}
-    	else{
-    		System.out.println("There is no Data for test , please load it !!");
+    	if(plants_iris_test.isEmpty() || plants_iris_training.isEmpty()){
+    		System.out.println("** There is no Data for test , please load it **");
     	}
     }
     

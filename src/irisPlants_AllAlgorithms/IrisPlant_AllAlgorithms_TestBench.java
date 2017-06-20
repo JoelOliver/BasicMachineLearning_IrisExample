@@ -21,7 +21,8 @@ public class IrisPlant_AllAlgorithms_TestBench {
 		
 		   System.out.println("Welcome , below there are the instructions for test bench:\n"
 		   		   + "- Tape two(2) for generate Data Training and Test;\n"
-		           + "- three(3) for show the result of Nearest Neighbor Algorithm;\n"
+		   		   + "- three(3) for show the Data Training and Test;\n"
+		           + "- four(4) for show the result of Nearest Neighbor Algorithm;\n"
 		           + "- one(1) for normalize the Data Training and Test;\n"
 		           + "- or zero (0) for exit;\n");		
         int controlTest = 1;
@@ -32,14 +33,14 @@ public class IrisPlant_AllAlgorithms_TestBench {
         	    controlTest = input.nextInt();
         	    
         	    if(controlTest == 1){
-        	    	System.out.println("This function is in development !");
+        	    	System.out.println("** This function is in development ! **");
         	    }
         	    
         	    if(controlTest == 2){
         	    	tb.generateDataTrainingAndTest();
         	    }
         	    if(controlTest == 3){
-        	    	tb.nearestNeighborAnalyse();
+        	    	tb.listTrainingAndTest();
         	    }
         	
         	}
@@ -47,7 +48,7 @@ public class IrisPlant_AllAlgorithms_TestBench {
         	
         	catch(Exception e){
         	
-        		System.out.println("Invalid Value , please try again ... \n");
+        		System.out.println("** Invalid Value , please try again ... **\n");
         		controlTest=1;
         	}
         	
