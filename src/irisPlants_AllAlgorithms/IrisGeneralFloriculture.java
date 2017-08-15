@@ -127,6 +127,7 @@ public class IrisGeneralFloriculture {
 	    	// the 80% rest is allocated in plants_iris_training
 	    	this.plants_iris_training = plants_iris_temp;
 	    	
+	    	System.out.println("**Data Training and Test generated **");
        } 
     
     protected void listTrainingAndTest(){

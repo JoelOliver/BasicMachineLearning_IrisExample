@@ -63,7 +63,7 @@ public class IrisPlant_AllAlgorithms_TestBench {
         	
         }while(controlTest!=0);
 		
-		System.out.println("FIM!");
+		System.out.println("\nEND OF TEST BENCH , THANKS !!");
 		
 		
 	}
