@@ -157,7 +157,7 @@ public class IrisGeneralFloriculture {
     	plants_iris_test.clear();
     	plants_iris_training.clear();
     	comparatorIds.clear();
-    	System.out.println("The training and test Data was cleared \n");
+    	System.out.println("The training and test Data was cleared !!!\n");
     }
 
     protected String nearestNeighborAnalyse(){

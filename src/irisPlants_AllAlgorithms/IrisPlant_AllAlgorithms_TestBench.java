@@ -9,7 +9,12 @@
 
 package irisPlants_AllAlgorithms;
 
+import java.awt.Dimension;
 import java.util.*;
+
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class IrisPlant_AllAlgorithms_TestBench {
 	
@@ -24,11 +29,12 @@ public class IrisPlant_AllAlgorithms_TestBench {
 		   		   + "- three(3) for show the Data Training and Test;\n"
 		           + "- four(4) for show the result of Nearest Neighbor Algorithm;\n"
 		           + "- one(1) for normalize the Data Training and Test;\n"
-		           + "- or zero (0) for exit;\n");		
+		           + "- or zero (0) for exit;\n");	
+
         int controlTest = 1;
         do {
         	try{
-        	    System.out.println("Tape an instruction:");
+        	    System.out.println("\nTape a new instruction:\n");
                 Scanner input = new Scanner(System.in);
         	    controlTest = input.nextInt();
         	    
@@ -41,6 +47,16 @@ public class IrisPlant_AllAlgorithms_TestBench {
         	    }
         	    if(controlTest == 3){
         	    	tb.listTrainingAndTest();
+        	    }
+        	    if(controlTest == 4){
+        	    	System.out.println("\nThe panel of Test is Open ...");
+        	    	JTextArea textArea = new JTextArea(tb.nearestNeighborAnalyse());
+        			JScrollPane scrollPane = new JScrollPane(textArea);  
+        			textArea.setLineWrap(true);  
+        			textArea.setWrapStyleWord(true); 
+        			scrollPane.setPreferredSize( new Dimension( 900, 600 ) );
+        			JOptionPane.showMessageDialog(null, scrollPane, "------ IA Floriculture ------",  
+        			                                       JOptionPane.CLOSED_OPTION);
         	    }
         	
         	}
