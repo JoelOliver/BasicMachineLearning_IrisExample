@@ -25,10 +25,11 @@ public class IrisPlant_AllAlgorithms_TestBench {
 		IrisGeneralFloriculture tb = new IrisGeneralFloriculture(); 
 		
 		   System.out.println("Welcome , below there are the instructions for test bench:\n"
-		   		   + "- Tape two(2) for generate Data Training and Test;\n"
-		   		   + "- three(3) for show the Data Training and Test;\n"
-		           + "- four(4) for show the result of Nearest Neighbor Algorithm;\n"
-		           + "- one(1) for normalize the Data Training and Test;\n"
+		   		   + "- Tape one(1) for generate Data Training and Test;\n"
+		   		   + "- two(2) for show the Data Training and Test;\n"
+		           + "- three(3) for show the result of Nearest Neighbor Algorithm;\n"
+		           + "- four(4) for normalize the Data Training and Test;\n"
+		           + "- five(5) for clean the Data Training and Test;\n"
 		           + "- or zero (0) for exit;\n");	
 
         int controlTest = 1;
@@ -39,24 +40,16 @@ public class IrisPlant_AllAlgorithms_TestBench {
         	    controlTest = input.nextInt();
         	    
         	    if(controlTest == 1){
-        	    	System.out.println("** This function is in development ! **");
-        	    }
-        	    
-        	    if(controlTest == 2){
         	    	tb.generateDataTrainingAndTest();
         	    }
-        	    if(controlTest == 3){
+        	    if(controlTest == 2){
         	    	tb.listTrainingAndTest();
         	    }
-        	    if(controlTest == 4){
-        	    	System.out.println("\nThe panel of Test is Open ...");
-        	    	JTextArea textArea = new JTextArea(tb.nearestNeighborAnalyse());
-        			JScrollPane scrollPane = new JScrollPane(textArea);  
-        			textArea.setLineWrap(true);  
-        			textArea.setWrapStyleWord(true); 
-        			scrollPane.setPreferredSize( new Dimension( 900, 600 ) );
-        			JOptionPane.showMessageDialog(null, scrollPane, "------ IA Floriculture ------",  
-        			                                       JOptionPane.CLOSED_OPTION);
+        	    if(controlTest == 3){
+        	    	System.out.println(tb.nearestNeighborAnalyse());
+        	    }
+        	    if(controlTest == 5){
+        	    	tb.cleanDataTrainingAndTest();
         	    }
         	
         	}

@@ -157,13 +157,13 @@ public class IrisGeneralFloriculture {
     	plants_iris_test.clear();
     	plants_iris_training.clear();
     	comparatorIds.clear();
-    	System.out.println("The training and test Data was cleared !!!\n");
+    	System.out.println("**The training and test Data was cleaned **\n");
     }
 
     protected String nearestNeighborAnalyse(){
     	double hits = 0;
 		double percentage;
-		String generalAnalyse = ">>>>>>                   Welcome to a Smart Floriculture:                    <<<<<< \n\n";
+		String generalAnalyse = "";
 		
 		for(int i=0;i<plants_iris_test.size();i++){
 			generalAnalyse+= "\n"+"Iris "+(i+1)+" : "
