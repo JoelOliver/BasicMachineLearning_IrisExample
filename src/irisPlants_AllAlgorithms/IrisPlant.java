@@ -45,8 +45,12 @@ public class IrisPlant {
 	               sp.get(2).toString()+" "+sp.get(3).toString()+"]";
 	}
 
-	protected void setSp(ArrayList<Double> sp) {
-		this.sp = sp;
+	protected void setSp(double sl,double sw,double pl,double pw) {
+        sp.set(0, sl);
+        sp.set(1, sw);
+        sp.set(2, pl);
+        sp.set(3, pw);
+
 	}
 
 	protected String getPlantType() {

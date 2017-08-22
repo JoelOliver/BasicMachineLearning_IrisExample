@@ -48,6 +48,9 @@ public class IrisPlant_AllAlgorithms_TestBench {
         	    if(controlTest == 3){
         	    	System.out.println(tb.nearestNeighborAnalyse());
         	    }
+        	    if(controlTest == 4){
+        	    	tb.normalizeTrainingAndTest();
+        	    }
         	    if(controlTest == 5){
         	    	tb.cleanDataTrainingAndTest();
         	    }

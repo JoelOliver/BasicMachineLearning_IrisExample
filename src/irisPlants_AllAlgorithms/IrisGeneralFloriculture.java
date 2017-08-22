@@ -160,6 +160,40 @@ public class IrisGeneralFloriculture {
     	comparatorIds.clear();
     	System.out.println("**The training and test Data was cleaned **\n");
     }
+    
+    //This method normalized the data Training and Test
+    private ArrayList <IrisPlant> plants_iris_training_temp;
+    private ArrayList <IrisPlant> plants_iris_test_temp;
+    
+    protected void normalizeTrainingAndTest(){
+      if(!plants_iris_training.isEmpty() && !plants_iris_test.isEmpty()){
+    	plants_iris_training_temp = new ArrayList <IrisPlant>();
+    	plants_iris_test_temp = new ArrayList <IrisPlant>();
+    	
+    	plants_iris_training_temp = this.plants_iris_training;
+    	plants_iris_test_temp = this.plants_iris_test;
+    	    	
+    	for(int i=0;i<plants_iris_training.size();i++){
+    	double training_norm=Math.sqrt(Math.pow(plants_iris_training.get(i).getSp().get(0),2.0) + Math.pow(plants_iris_training.get(i).getSp().get(1),2.0) 
+                            +Math.pow(plants_iris_training.get(i).getSp().get(2),2.0) + Math.pow(plants_iris_training.get(i).getSp().get(3),2.0));
+    	plants_iris_training.get(i).setSp(plants_iris_training.get(i).getSp().get(0)/training_norm,plants_iris_training.get(i).getSp().get(1)/training_norm,
+    			                          plants_iris_training.get(i).getSp().get(2)/training_norm,plants_iris_training.get(i).getSp().get(3)/training_norm);
+    	}
+    	
+    	for(int i=0;i<plants_iris_test.size();i++){
+    		double test_norm=Math.sqrt(Math.pow(plants_iris_test.get(i).getSp().get(0),2.0) + Math.pow(plants_iris_test.get(i).getSp().get(1),2.0) 
+                                +Math.pow(plants_iris_test.get(i).getSp().get(2),2.0) + Math.pow(plants_iris_test.get(i).getSp().get(3),2.0));
+         plants_iris_test.get(i).setSp(plants_iris_test.get(i).getSp().get(0)/test_norm,plants_iris_test.get(i).getSp().get(1)/test_norm,
+		                                   plants_iris_test.get(i).getSp().get(2)/test_norm,plants_iris_test.get(i).getSp().get(3)/test_norm);
+    	}
+    	
+
+    	System.out.println("**The training and test Data was normalized **\n");
+      }
+      else{
+    	System.out.println("** There is no Data for test , please load it **");
+      }
+    }
 
     protected String nearestNeighborAnalyse(){
     	double hits = 0;
